@@ -381,7 +381,7 @@ def ai_move_p2(board, player, opponent):
                             break  # Move only one piece from the mill
 
     # If no mill move was possible, move any other piece
-    if best_move is None and ai_pieces:
+    else:
         for piece_pos in ai_pieces:
             for destination in valid_moves[piece_pos]:
                 if is_valid_move_p2(board, destination, piece_pos):
